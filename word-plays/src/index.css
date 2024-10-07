@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #008080; /* Teal background */
+  color: #ffffff; /* White text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center; /* Center text */
+}
+
+textarea {
+ 
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: none;
+}
+
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.stat-box {
+  background-color: #4b0082; /* Purple accent */
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center buttons */
+  margin: 20px 0;
+}
+
+button {
+  flex: 1;
+  margin: 5px;
+  padding: 10px;
+  background-color: #4b0082; /* Purple button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #7f00ff; /* Lighter purple on hover */
+}
+
+.output-section {
+  margin-top: 20px;
+}
+.output-box p {
+  color: #555; /* A softer color for the text */
+  line-height: 1.5; /* Line height for better readability */
+  margin: 0; /* Remove default margin */
+}
+.output-box {
+  background-color: rgba(255, 255, 255, 0.9); /* Whitish background */
+  border: 1px solid #ccc; /* Light border for contrast */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px; /* Spacing inside the box */
+  margin-top: 10px; /* Space above the box */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+.copy-notification {
+  background-color: #4b0082; /* Purple notification color */
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  animation: fadeOut 2s ease-in-out; /* Animation for copy notification */
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.decode-method {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px
+}
