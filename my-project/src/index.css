@@ -1,0 +1,154 @@
+/* index.css */
+
+/* General container styling for the story generator */
+.story-generator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #f0f4f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.story-generator-container h2 {
+  color: #00695c; /* Teal */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Input container styling */
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #004d40;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.input-container input:focus {
+  border-color: #26a69a; /* Light teal */
+}
+
+/* Styling for the tags container and each tag */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background-color: #004d40;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.remove-tag-button {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  margin-left: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.remove-tag-button:hover {
+  color: #ff8a80; /* Light red for better visibility */
+}
+
+/* Button styling */
+button {
+  background-color: #00695c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #004d40;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #b0bec5;
+  cursor: not-allowed;
+}
+
+/* Loading overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #00695c; /* Teal */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error message styling */
+.error-message {
+  color: #d32f2f;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Story display */
+.story-generator-container h3 {
+  color: #004d40;
+  margin-top: 30px;
+}
+
+.story-generator-container p {
+  background-color: #e0f2f1;
+  color: #004d40;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+}
+
+.story-generator-container p.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
